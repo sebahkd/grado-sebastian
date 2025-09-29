@@ -24,134 +24,221 @@
       --accent:var(--color3);
       font-family: "Inter", sans-serif;
     }
-    html,body{margin:0; padding:0; height:100%; background:var(--bg); color:#fff;}
-    .wrap{min-height:100vh; display:flex; flex-direction:column;}
-    header{position:fixed; top:0; left:0; right:0; display:flex; justify-content:center; padding:16px; z-index:20; background:rgba(0,0,0,0.3);}
-    header nav a{color:#fff; margin:0 12px; text-decoration:none; font-weight:500;}
+    html,body{margin:0; padding:0; background:var(--bg); color:#fff; scroll-behavior:smooth;}
+    header{position:fixed; top:0; left:0; right:0; display:flex; justify-content:center; padding:16px; z-index:20; background:rgba(0,0,0,0.4); backdrop-filter:blur(6px);}
+    header nav a{color:#fff; margin:0 12px; text-decoration:none; font-weight:600;}
 
-    .hero{display:flex; align-items:center; justify-content:center; min-height:100vh; position:relative; text-align:center; overflow:hidden;}
-    .hero h1{font-size:clamp(2rem,6vw,4rem); margin:0 0 12px; color:var(--accent);}
+    .hero{display:flex; align-items:center; justify-content:center; min-height:100vh; position:relative; text-align:center; overflow:hidden; background:url("fondo1.jpg") center/cover;}
+    .hero h1{font-size:clamp(2rem,6vw,4rem); margin:0 0 12px; color:var(--accent); text-shadow:0 3px 10px #000;}
     .hero p{margin:0 0 18px; font-size:1.2rem; color:#f1f1f1;}
     .btn{background:var(--accent); color:#fff; padding:12px 20px; border-radius:999px; font-weight:600; text-decoration:none;}
 
-    .section{padding:100px 24px; max-width:800px; margin:0 auto; text-align:center; position:relative; z-index:5;}
+    .section{padding:100px 24px; max-width:900px; margin:0 auto; text-align:center;}
     .section h2{color:var(--color1); margin-bottom:16px; font-size:2rem;}
     .card{background:rgba(255,255,255,0.08); padding:24px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.5); margin-top:20px;}
 
-    footer{padding:30px; text-align:center; color:#bbb; background:rgba(0,0,0,0.2); position:relative; z-index:5;}
+    /* timeline */
+    .timeline{position:relative; margin:40px auto; padding-left:20px; border-left:3px solid var(--accent);}
+    .timeline-item{margin-bottom:30px; text-align:left;}
+    .timeline-item h3{margin:0; color:var(--accent);}
+    .timeline-item span{font-size:0.9rem; opacity:0.8;}
 
-    /* canvas para partículas */
+    /* galería */
+    .gallery{display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:12px; margin-top:20px;}
+    .gallery img{width:100%; border-radius:8px; object-fit:cover;}
+
+    footer{padding:30px; text-align:center; color:#bbb; background:rgba(0,0,0,0.2);}
+
+    /* partículas */
     #bgCanvas{position:fixed; top:0; left:0; width:100%; height:100%; z-index:0;}
+    main, header, footer{position:relative; z-index:5;}
   </style>
 </head>
 <body>
   <canvas id="bgCanvas"></canvas>
-  <div class="wrap">
-    <header>
-      <nav>
-        <a href="#detalles">Detalles</a>
-        <a href="#fiesta">Fiesta</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-    </header>
 
-    <main>
-      <section id="inicio" class="hero">
-        <div class="hero-content" style="z-index:5;">
-          <h1>Grado Sebastián</h1>
-          <p>Universidad del Rosario — Un logro que celebramos juntos</p>
-          <a class="btn" href="#detalles">Ver detalles</a>
-        </div>
-      </section>
+  <header>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#mood">Mood</a>
+      <a href="#mensaje">Mensaje</a>
+      <a href="#formulario">Confirmar</a>
+      <a href="#contador">Contador</a>
+      <a href="#cronograma">Cronograma</a>
+      <a href="#galeria">Galería</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#sobres">Sobres</a>
+    </nav>
+  </header>
 
-      <section id="detalles" class="section">
-        <h2>Ceremonia</h2>
-        <div class="card">
-          <p><strong>📅 Fecha:</strong> 15 de noviembre de 2025</p>
-          <p><strong>⏰ Hora:</strong> 6:00 p.m.</p>
-          <p><strong>📍 Lugar:</strong> Hotel del Coliseo de Ferias</p>
-        </div>
-      </section>
+  <main>
+    <!-- Hero -->
+    <section id="inicio" class="hero">
+      <div>
+        <h1>¡Vamos a celebrar mi grado profesional!</h1>
+        <p>Es un festejo, te quiero conmigo 💖</p>
+        <a class="btn" href="#mood">Continuar</a>
+      </div>
+    </section>
 
-      <section id="fiesta" class="section">
-        <h2>Celebración</h2>
-        <div class="card">
-          <p>Después de la ceremonia tendremos la fiesta de grado 🎉</p>
-          <p>¡Estás invitado a compartir este momento tan especial!</p>
-          <p><strong>Lluvia de sobres 💌:</strong> Una forma de acompañar con tu cariño.</p>
-        </div>
-      </section>
+    <!-- Mood -->
+    <section id="mood" class="section">
+      <h2>Grado de Sebas</h2>
+      <p>Dale play al mood y déjate llevar 🎶</p>
+<iframe style="border-radius:12px" 
+  src="https://open.spotify.com/embed/track/5vgwmo15qa4jKLFW726iaF?utm_source=generator" 
+  width="100%" height="152" frameborder="0" 
+  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+  loading="lazy"></iframe>
+    </section>
 
-      <section id="contacto" class="section">
-        <h2>Confirmar asistencia</h2>
-        <div class="card">
-          <p>Por favor confirma tu asistencia antes del <strong>5 de noviembre</strong>.</p>
-          <p>📲 WhatsApp: <a href="https://wa.me/573137088691" style="color:var(--accent)">+57 313 708 8691</a></p>
-          <p>📧 Correo: sebasplaz@gmail.com</p>
-        </div>
-      </section>
-    </main>
+    <!-- Mensaje -->
+    <section id="mensaje" class="section">
+      <h2>Un mensaje para ti</h2>
+      <div class="card">
+        <p>Este grado es más que un logro académico, es un camino compartido con amigos, familia y personas especiales como tú.</p>
+        <p>Me encantaría que me acompañes en este festejo único. ¡Tu presencia lo hará inolvidable!</p>
+        <p>Gracias por ser parte de mi historia ❤️</p>
+      </div>
+    </section>
 
-    <footer>
-      © <span id="year"></span> Con cariño, Sebastián 💖
-    </footer>
-  </div>
+    <!-- Formulario -->
+<!-- Formulario -->
+<section id="formulario" class="section">
+  <h2>Confirma tu asistencia</h2>
+  <form action="https://formsubmit.co/sebasplaz@gmail.com" method="POST" class="card">
+    <!-- evita spam -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+
+    <div style="margin-bottom:15px;">
+      <label for="nombre">Nombre completo</label><br>
+      <input type="text" id="nombre" name="nombre" required style="width:100%;padding:8px;border-radius:6px;border:none;">
+    </div>
+
+    <div style="margin-bottom:15px;">
+      <label for="correo">Correo electrónico</label><br>
+      <input type="email" id="correo" name="correo" required style="width:100%;padding:8px;border-radius:6px;border:none;">
+    </div>
+
+    <div style="margin-bottom:15px;">
+      <label for="celular">Número de celular</label><br>
+      <input type="tel" id="celular" name="celular" required style="width:100%;padding:8px;border-radius:6px;border:none;">
+    </div>
+
+    <div style="margin-bottom:15px;">
+      <label for="invitados">Cantidad de invitados a confirmar</label><br>
+      <input type="number" id="invitados" name="invitados" min="1" required style="width:100%;padding:8px;border-radius:6px;border:none;">
+    </div>
+
+    <button type="submit" class="btn">Enviar confirmación</button>
+  </form>
+</section>
+
+
+    <!-- Contador -->
+    <section id="contador" class="section" style="background:url('fondo2.jpg') center/cover; color:#fff;">
+      <h2>¡La cuenta regresiva ha comenzado!</h2>
+      <div id="countdown" style="font-size:2rem; margin-top:20px;"></div>
+    </section>
+
+    <!-- Cronograma -->
+    <section id="cronograma" class="section">
+      <h2>Prepárate, así se va a celebrar 🎉</h2>
+      <div class="timeline">
+        <div class="timeline-item"><h3>Recepción</h3><span>5:30 PM — Coliseo</span></div>
+        <div class="timeline-item"><h3>Inicio</h3><span>6:00 PM</span></div>
+        <div class="timeline-item"><h3>Palabras</h3><span>6:30 PM</span></div>
+        <div class="timeline-item"><h3>Cena</h3><span>7:00 PM</span></div>
+        <div class="timeline-item"><h3>Fiesta</h3><span>8:00 PM</span></div>
+        <div class="timeline-item"><h3>Baile</h3><span>Hasta que el cuerpo aguante 🕺</span></div>
+      </div>
+    </section>
+
+    <!-- Galería -->
+    <section id="galeria" class="section">
+      <h2>Recuerdos</h2>
+      <p>Un vistazo a los momentos que nos han traído hasta aquí 📸</p>
+      <div class="gallery">
+        <img src="galeria1.jpg" alt="">
+        <img src="galeria2.jpg" alt="">
+        <img src="galeria3.jpg" alt="">
+        <img src="galeria4.jpg" alt="">
+      </div>
+    </section>
+
+    <!-- Ubicación -->
+    <section id="ubicacion" class="section">
+      <h2>Detalles del evento</h2>
+      <p><strong>📅 Fecha:</strong> 15 de noviembre de 2025</p>
+      <p><strong>⏰ Hora:</strong> 6:00 PM</p>
+      <p><strong>📍 Lugar:</strong> Coliseo de Feria Manuel Victoria Rojas</p>
+      <p><strong>👗 Código de vestimenta:</strong> Cómodos y guapos, sin formalidades estrictas.</p>
+      <a class="btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Grado+de+Sebas&dates=20251115T230000Z/20251116T040000Z&details=Celebración+del+grado&location=Coliseo+de+Feria+Manuel+Victoria+Rojas" target="_blank">📅 Guardar en mi calendario</a>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="300" style="border:0; margin-top:20px;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <!-- Sobres -->
+    <section id="sobres" class="section">
+      <h2>Eres el mejor regalo</h2>
+      <p>Tu presencia es mi mayor alegría, pero si quieres apoyarme en mis sueños, aquí puedes hacerlo con una lluvia de sobres 💌</p>
+      <a href="#bancarios" class="btn">Ver datos bancarios</a>
+      <div id="bancarios" style="margin-top:40px; display:none;">
+        <p><strong>Banco:</strong> Bancolombia</p>
+        <p><strong>Cuenta de ahorros:</strong> 123-456-789</p>
+        <p><strong>A nombre de:</strong> Sebastián Plazas</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Powered by Todos ustedes 💖
+  </footer>
 
   <script>
-    // año dinámico
+    // Año dinámico
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // animaciones GSAP
-    window.addEventListener("load", ()=>{
-      gsap.from(".hero h1", {y:40, opacity:0, duration:1});
-      gsap.from(".hero p", {y:20, opacity:0, duration:1, delay:0.2});
-      gsap.from(".btn", {scale:0.8, opacity:0, duration:0.8, delay:0.4});
-
-      gsap.utils.toArray(".card").forEach(card=>{
-        gsap.from(card,{
-          scrollTrigger:{trigger:card, start:"top 85%"},
-          y:40, opacity:0, duration:0.8
-        });
-      });
+    // Mostrar datos bancarios
+    document.querySelector("#sobres a").addEventListener("click", e=>{
+      e.preventDefault();
+      document.getElementById("bancarios").style.display="block";
     });
 
-    // partículas simples
+    // Contador
+    const countdown = document.getElementById("countdown");
+    const target = new Date("Nov 15, 2025 18:00:00").getTime();
+    setInterval(()=>{
+      let now = new Date().getTime();
+      let diff = target - now;
+      if(diff<0){countdown.textContent="¡Ya comenzó la fiesta! 🎉"; return;}
+      let d=Math.floor(diff/(1000*60*60*24));
+      let h=Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+      let m=Math.floor((diff%(1000*60*60))/(1000*60));
+      let s=Math.floor((diff%(1000*60))/1000);
+      countdown.textContent=`${d}d ${h}h ${m}m ${s}s`;
+    },1000);
+
+    // Partículas
     (() => {
       const canvas = document.getElementById("bgCanvas");
       const ctx = canvas.getContext("2d");
-      let w, h;
-      function resize(){
-        w = canvas.width = window.innerWidth;
-        h = canvas.height = window.innerHeight;
-      }
-      resize();
-      window.addEventListener("resize", resize);
-
-      const particles = [];
-      const num = 120;
+      let w,h;
+      function resize(){w=canvas.width=window.innerWidth;h=canvas.height=window.innerHeight;}
+      resize(); window.addEventListener("resize",resize);
+      const particles=[];
+      const num=100;
       for(let i=0;i<num;i++){
-        particles.push({
-          x: Math.random()*w,
-          y: Math.random()*h,
-          r: Math.random()*3+1,
-          dx: (Math.random()-0.5)*0.7,
-          dy: (Math.random()-0.5)*0.7,
-          color: (Math.random() < 0.5) ? "rgba(194,39,119,0.6)" : "rgba(245,0,127,0.6)"
-        });
+        particles.push({x:Math.random()*w,y:Math.random()*h,r:Math.random()*3+1,dx:(Math.random()-0.5)*0.7,dy:(Math.random()-0.5)*0.7,color:(Math.random()<0.5)?"rgba(194,39,119,0.6)":"rgba(245,0,127,0.6)"});
       }
-
       function animate(){
         ctx.clearRect(0,0,w,h);
         for(let p of particles){
-          p.x += p.dx;
-          p.y += p.dy;
+          p.x+=p.dx; p.y+=p.dy;
           if(p.x<0||p.x>w) p.dx*=-1;
           if(p.y<0||p.y>h) p.dy*=-1;
-
-          ctx.beginPath();
-          ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-          ctx.fillStyle = p.color;
-          ctx.fill();
+          ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+          ctx.fillStyle=p.color; ctx.fill();
         }
         requestAnimationFrame(animate);
       }
@@ -159,5 +246,4 @@
     })();
   </script>
 </body>
-
 </html>
