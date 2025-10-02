@@ -5,222 +5,281 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>🎓 Grado Sebastián Plazas Andrade</title>
 
+  <!-- SEO -->
+  <meta name="description" content="Invitación especial al grado de Sebastián Plazas Andrade en la Universidad del Rosario. ¡Una celebración única e irrepetible!">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
   <!-- Fuente Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <!-- Estilos -->
-<style>
-  :root {
-    --primary: #550125;    
-    --secondary: #550125;  
-    --accent: #550125;     
-    --dark: #333333;       
-    --muted: #777777;      
-    --background: #f8f7ed; 
-    --background-alt: #faf7f2; 
-  }
+  <style>
+:root {
+  --primary: #6a0f2d;       /* Burdeos intenso */
+  --secondary: #8c1c3a;     /* Burdeos medio, para contrastes */
+  --accent: #d4af37;        /* Dorado cálido (lujo y celebración) */
+  --dark: #2e2e2e;          /* Gris muy oscuro para texto */
+  --muted: #9c9c9c;         /* Gris medio para secundarios */
+  --background: #fdfaf6;    /* Fondo crema suave */
+  --background-alt: #fffdf9; /* Fondo alternativo aún más claro */
+}
 
-  body, html {
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-    background-color: var(--background);
-    color: var(--dark);
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-  }
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: var(--background);
+      color: var(--dark);
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      position: relative;
+    }
 
-  header {
-    text-align: center;
-    padding: 120px 20px 60px;
-    position: relative;
-    z-index: 2;
-    background: var(--background-alt);
-  }
+    /* Fondo elegante */
+    body {
+      background: linear-gradient(-45deg, #fdfaf6, #fffdf9, #f9e4d0, #fdfaf6);
+      background-size: 400% 400%;
+      animation: gradientMove 15s ease infinite;
+    }
 
-  header h1 {
-    font-size: 4rem;
-    font-family: "Great Vibes", cursive;
-    color: var(--accent);
-    margin-bottom: 10px;
-  }
+    @keyframes gradientMove {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
 
-  header p {
-    font-size: 1.3rem;
-    color: var(--dark);
-  }
+    /* Brillos dorados */
+    body::before {
+      content: "";
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: url("https://www.transparenttextures.com/patterns/stardust.png");
+      opacity: 0.18;
+      animation: twinkle 6s infinite alternate;
+      z-index: 0;
+    }
 
-  section {
-    padding: 70px 20px;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-  }
+    @keyframes twinkle {
+      from {opacity: 0.12;}
+      to {opacity: 0.25;}
+    }
 
-  h2 {
-    color: var(--primary);
-    margin-bottom: 20px;
-    font-size: 2.2rem;
-  }
+    header {
+      text-align: center;
+      padding: 120px 20px 60px;
+      position: relative;
+      z-index: 2;
+      background: var(--background-alt);
+    }
 
-  .card {
-    max-width: 800px;
-    margin: auto;
-    background: var(--background-alt);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  }
+    header h1 {
+      font-size: 4rem;
+      font-family: "Great Vibes", cursive;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
 
-  /* Imagen */
-  .image-section {
-    padding: 0;
-    margin: 40px 0;
-  }
-  .image-section img {
-    display: block;
-    max-width: 500px; 
-    width: 100%;
-    margin: 0 auto;
-    border-radius: 12px;
-  }
+    header h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--accent);
+      margin-top: 0.5rem;
+    }
 
-  /* Formulario */
-  form {
-    max-width: 500px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  input, textarea {
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1rem;
-    background: #fff;
-  }
-  button {
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background: var(--primary);
-    color: #fff;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  button:hover {
-    background: var(--accent);
-  }
+    header p {
+      font-size: 1.3rem;
+      color: var(--dark);
+    }
 
-  /* Timeline */
-  .timeline {
-    max-width: 600px;
-    margin: auto;
-    position: relative;
-    padding-left: 30px;
-  }
-  .timeline::before {
-    content: "";
-    position: absolute;
-    left: 15px;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background: var(--accent);
-    border-radius: 2px;
-  }
-  .timeline-item {
-    position: relative;
-    margin-bottom: 40px;
-    text-align: left;
-    padding-left: 50px; 
-  }
-  .timeline-item::before {
-    content: "🎉";
-    position: absolute;
-    left: 0;   
-    top: 0;
-    background: var(--primary);
-    color: #fff;
-    border-radius: 50%;
-    width: 28px;
-    height: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-  }
-  .timeline-item h3 {
-    margin: 0 0 6px;
-    color: var(--accent);
-  }
+    section {
+      padding: 70px 20px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
 
-  /* Galería */
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 12px;
-  }
-  .gallery img {
-    width: 100%;
-    border-radius: 12px;
-  }
+    h2 {
+      color: var(--primary);
+      margin-bottom: 20px;
+      font-size: 2.2rem;
+    }
 
-  /* Contador */
-  #countdown {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-top: 20px;
-    color: var(--primary);
-  }
+    .card {
+      max-width: 800px;
+      margin: auto;
+      background: var(--background-alt);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
 
-  footer {
-    text-align: center;
-    padding: 20px;
-    background: var(--secondary);
-    color: #fff;
-    margin-top: 40px;
-  }
+    /* Imagen */
+    .image-section {
+      padding: 0;
+      margin: 40px 0;
+    }
+    .image-section img {
+      display: block;
+      max-width: 500px; 
+      width: 100%;
+      margin: 0 auto;
+      border-radius: 12px;
+    }
 
-  #particles-js {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-  }
+    /* Formulario */
+    form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: #fff;
+    }
+    button {
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: var(--primary);
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: var(--accent);
+    }
 
-  /* Botón calendario */
-  .btn-calendario {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 16px 28px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #fff;
-    background: linear-gradient(135deg, var(--accent), var(--primary));
-    border-radius: 10px;
-    text-decoration: none;
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
-  }
-  .btn-calendario:hover {
-    transform: scale(1.08);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-    background: linear-gradient(135deg, var(--primary), var(--accent));
-  }
-</style>
+    /* Timeline */
+    .timeline {
+      max-width: 600px;
+      margin: auto;
+      position: relative;
+      padding-left: 30px;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 15px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 40px;
+      text-align: left;
+      padding-left: 50px; 
+    }
+    .timeline-item::before {
+      content: "🎉";
+      position: absolute;
+      left: 0;   
+      top: 0;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+    .timeline-item h3 {
+      margin: 0 0 6px;
+      color: var(--accent);
+    }
+
+    /* Galería */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    /* Contador */
+    #countdown {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-top: 20px;
+      color: var(--primary);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: var(--secondary);
+      color: #fff;
+      margin-top: 40px;
+    }
+
+    /* Botón calendario */
+    .btn-calendario {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 16px 28px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #fff;
+      background: linear-gradient(135deg, var(--accent), var(--primary));
+      border-radius: 10px;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+    .btn-calendario:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+    }
+
+    /* Honeypot oculto */
+    .hidden {
+      display: none !important;
+      visibility: hidden;
+    }
+
+    .dress-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin: 1.5rem 0;
+    }
+
+    .dress-item {
+      flex: 1 1 250px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1rem 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .dress-item h3 {
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+  </style>
 </head>
 <body>
-  <!-- Fondo partículas -->
-  <div id="particles-js"></div>
 
   <!-- Header -->
   <header>
-    <h1>🎓 Grado de Sebastián</h1>
-    <p>Universidad del Rosario · Una celebración única e irrepetible 💖</p>
+    <h1>Sebastián Plazas Andrade</h1>
+    <h2>Universidad del Rosario</h2>
+    <p>🎓 ¡Me gradué! 🎓</p>
   </header>
 
   <!-- Mood -->
@@ -247,7 +306,7 @@
 
   <!-- Imagen entre textos -->
   <section class="image-section">
-    <img src="fondo-extra1.jpg" alt="Celebración">
+    <img src="fondo-extra1.jpg" alt="Decoración del evento de grado">
   </section>
 
   <!-- Timeline -->
@@ -255,28 +314,32 @@
     <h2>🕒 Así se vivirá la noche</h2>
     <div class="timeline">
       <div class="timeline-item">
-        <h3>Recepción</h3>
-        <p>7:30 PM · Bienvenida con cóctel y fotos</p>
+        <h3>Recepción & Bienvenida</h3>
+        <p>6:00 PM · Llegada con cóctel de bienvenida, abrazos y primeras fotos 📸✨</p>
       </div>
       <div class="timeline-item">
-        <h3>Inicio</h3>
-        <p>8:00 PM · Ceremonia de apertura con palabras especiales</p>
+        <h3>Ceremonia de grado</h3>
+        <p>7:00 PM · El gran momento: toga, birrete y la emoción de recibir el título 🎓❤️</p>
       </div>
       <div class="timeline-item">
-        <h3>Videos</h3>
-        <p>8:30 PM momento emotivo</p>
+        <h3>Brindis & Palabras</h3>
+        <p>8:00 PM · Un brindis especial y mensajes que nos llenarán de orgullo 🥂</p>
       </div>
       <div class="timeline-item">
         <h3>Cena</h3>
-        <p>9:00 PM · Disfrutemos juntos de una cena deliciosa 🍴</p>
+        <p>9:00 PM · Disfrutemos juntos de una cena deliciosa para recargar energía 🍴😋</p>
       </div>
       <div class="timeline-item">
         <h3>Hora loca</h3>
-        <p>10:00 PM · ¡Luces, colores y mucha energía! 🎭</p>
+        <p>11:00 PM · ¡Empieza la locura! Colores, risas y pura alegría 🎭🎉</p>
       </div>
       <div class="timeline-item">
-        <h3>Fiesta y baile</h3>
-        <p>12:00 PM 💃🕺</p>
+        <h3>Fiesta & Baile</h3>
+        <p>12:00 AM · A romper la pista con la mejor música y mucha energía 💃🕺🔥</p>
+      </div>
+      <div class="timeline-item">
+        <h3>Cierre mágico</h3>
+        <p>3:00 AM · Despedida entre risas, memorias y la promesa de nuevas aventuras ✨🌙</p>
       </div>
     </div>
   </section>
@@ -284,28 +347,22 @@
   <!-- Contador -->
   <section id="contador">
     <h2>⏳ La cuenta regresiva ha comenzado</h2>
-    <div id="countdown"></div>
+    <div class="countdown" id="countdown"></div>
   </section>
 
   <!-- Imagen entre textos -->
   <section class="image-section">
-    <img src="fondo-extra2.jpg" alt="Celebración">
+    <img src="fondo-extra2.jpg" alt="Amigos celebrando en el evento">
   </section>
 
   <!-- Galería -->
   <section id="galeria">
     <h2>📸 Recuerdos</h2>
     <div class="gallery">
-      <img src="Galeria1.jpg" alt="Foto 1">
-      <img src="Galeria2.jpg" alt="Foto 2">
-      <img src="Galeria3.jpg" alt="Foto 3">
-      <img src="Galeria4.jpg" alt="Foto 4">
-      <img src="Galeria5.jpg" alt="Foto 5">
-      <img src="Galeria6.jpg" alt="Foto 6">
-      <img src="Galeria7.jpg" alt="Foto 7">
-      <img src="Galeria8.jpg" alt="Foto 8">
-      <img src="Galeria9.jpg" alt="Foto 9">
-      <img src="Galeria10.jpg" alt="Foto 10">
+      <img src="Galeria1.jpg" alt="Foto de recuerdo 1">
+      <img src="Galeria6.jpg" alt="Foto de recuerdo 6">
+      <img src="Galeria7.jpg" alt="Foto de recuerdo 7">
+      <img src="Galeria9.jpg" alt="Foto de recuerdo 9">
     </div>
   </section>
 
@@ -324,10 +381,22 @@
 
   <!-- Código de vestimenta -->
   <section id="vestimenta">
-    <h2>👗 Código de vestimenta</h2>
+    <h2>✨👗 Con Flow y Estilo 👔✨</h2>
     <div class="card">
-      <p>¡Ven como más te guste! No habrá reglas estrictas de etiqueta. Queremos que te sientas cómodo, linda, sexy y con estilo propio. 💃🕺</p>
-      <p>No es necesario traje o vestido de gala, pero tampoco tan casual. La idea es celebrar con flow y actitud 🔥.</p>
+      <p>La idea es celebrar con actitud 🔥. No hay reglas estrictas, pero queremos que todos brillen en la noche 💫.</p>
+      <div class="dress-flex">
+        <div class="dress-item">
+          <h3>Para ellos</h3>
+          <p>Camisa cool, pantalón elegante o semi formal y zapatos con estilo 👞.  
+          No hace falta traje completo, pero sí un look con flow 😎.</p>
+        </div>
+        <div class="dress-item">
+          <h3>Para ellas</h3>
+          <p>Vestido lindo, jumpsuit o conjunto con el que te sientas cómoda y espectacular 👠.  
+          Glam y estilo sin necesidad de gala rígida ✨.</p>
+        </div>
+      </div>
+      <p>Lo importante es que vengas con la mejor vibra y muchas ganas de gozar 💃🕺.</p>
     </div>
   </section>
 
@@ -344,76 +413,91 @@
   <section id="formulario">
     <h2>Confirma tu asistencia</h2>
     <form id="rsvpForm">
-      <input type="text" name="nombre" placeholder="Tu nombre completo" required>
-      <input type="email" name="correo" placeholder="Tu correo electrónico" required>
-      <input type="tel" name="telefono" placeholder="Tu teléfono" required>
-      <input type="number" name="invitados" placeholder="Cantidad de invitados" min="1" required>
-      <textarea name="mensaje" rows="4" placeholder="Déjame un mensaje ❤️"></textarea>
-      <button type="submit">Enviar confirmación</button>
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+
+      <label for="correo">Correo electrónico</label>
+      <input type="email" id="correo" name="correo" placeholder="Tu correo electrónico" required>
+
+      <label for="telefono">Teléfono</label>
+      <input type="tel" id="telefono" name="telefono" placeholder="Tu teléfono" required>
+
+      <label for="invitados">Cantidad de invitados</label>
+      <input type="number" id="invitados" name="invitados" placeholder="Cantidad de invitados" min="1" required>
+
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="4" placeholder="Déjame un mensaje ❤️"></textarea>
+
+      <!-- Honeypot -->
+      <input type="text" name="_honey" class="hidden">
+
+      <button type="submit">Confirmar asistencia</button>
     </form>
-    <p id="formMsg" style="margin-top:10px;"></p>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>✨ Con cariño, Sebastián ✨</p>
-    <p>Powered by todos ustedes 💖</p>
+    <p>Con mucho amor,  
+    Sebastián Plazas Andrade ❤️🎓</p>
   </footer>
 
-  <!-- Librerías -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
-
-  <!-- Scripts -->
   <script>
-    /* Partículas */
-    particlesJS("particles-js", {
-      "particles": {
-        "number": {"value": 100},
-        "size": {"value": 3},
-        "move": {"speed": 2},
-        "line_linked": {"enable": true, "color":"#fff"}
-      }
-    });
-
-    /* Contador */
+    // Contador
     const eventDate = new Date("Nov 15, 2025 18:00:00").getTime();
-    const timer = setInterval(() => {
-      let now = new Date().getTime();
-      let distance = eventDate - now;
+    const countdown = document.getElementById("countdown");
+
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+
       if (distance < 0) {
-        document.getElementById("countdown").innerHTML = "🎉 ¡Ya comenzó!";
-        clearInterval(timer);
-      } else {
-        let d = Math.floor(distance / (1000*60*60*24));
-        let h = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
-        let m = Math.floor((distance % (1000*60*60)) / (1000*60));
-        let s = Math.floor((distance % (1000*60)) / 1000);
-        document.getElementById("countdown").innerHTML =
-          `${d}d ${h}h ${m}m ${s}s`;
+        countdown.innerHTML = "🎉 ¡El evento ha comenzado! 🎉";
+        return;
       }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = 
+        `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }, 1000);
 
-    /* Formulario con FormSubmit (sin salir de la página) */
-    const form = document.getElementById("rsvpForm");
-    const msg = document.getElementById("formMsg");
-    form.addEventListener("submit", async (e) => {
+    // Formulario
+    document.getElementById("rsvpForm").addEventListener("submit", async function(e){
       e.preventDefault();
-      const data = new FormData(form);
+
+      // Honeypot
+      if (this._honey.value !== "") {
+        alert("Error en el formulario.");
+        return;
+      }
+
+      const data = {
+        nombre: this.nombre.value,
+        correo: this.correo.value,
+        telefono: this.telefono.value,
+        invitados: this.invitados.value,
+        mensaje: this.mensaje.value
+      };
+
       try {
-        await fetch("https://formsubmit.co/sebasplaz@gmail.com", {
+        const response = await fetch("https://formspree.io/f/xjkvjpgn", {
           method: "POST",
-          body: data
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data)
         });
-        msg.textContent = "✅ ¡Gracias! Tu confirmación fue enviada.";
-        form.reset();
-      } catch (err) {
-        msg.textContent = "❌ Error al enviar. Intenta nuevamente.";
+
+        if (response.ok) {
+          alert("🎉 ¡Gracias por confirmar tu asistencia!");
+          this.reset();
+        } else {
+          alert("❌ Hubo un error. Intenta nuevamente.");
+        }
+      } catch (error) {
+        alert("❌ Error de conexión. Intenta más tarde.");
       }
     });
   </script>
 </body>
 </html>
-
-
