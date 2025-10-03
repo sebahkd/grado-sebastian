@@ -3,288 +3,356 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>🎓 Grado Sebastián Plazas Andrade</title>
+  <title>🎓 Sebastián Plazas Andrade</title>
 
-  <!-- SEO -->
+  <!-- Optimización para buscadores -->
   <meta name="description" content="Invitación especial al grado de Sebastián Plazas Andrade en la Universidad del Rosario. ¡Una celebración única e irrepetible!">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-  <!-- Fuente Google Fonts -->
+  <!-- Fuente en línea -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Lightbox CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
 
   <!-- Estilos -->
   <style>
 :root {
-  --primary: #6a0f2d;       /* Burdeos intenso */
-  --secondary: #8c1c3a;     /* Burdeos medio, para contrastes */
-  --accent: #d4af37;        /* Dorado cálido (lujo y celebración) */
-  --dark: #2e2e2e;          /* Gris muy oscuro para texto */
-  --muted: #9c9c9c;         /* Gris medio para secundarios */
-  --background: #fdfaf6;    /* Fondo crema suave */
-  --background-alt: #fffdf9; /* Fondo alternativo aún más claro */
+  --primary: #6a0f2d;
+  --secondary: #8c1c3a;
+  --accent: #d4af37;
+  --dark: #2e2e2e;
+  --muted: #9c9c9c;
+  --background: #fdfaf6;
+  --background-alt: #fffdf9;
 }
 
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: "Poppins", sans-serif;
-      background-color: var(--background);
-      color: var(--dark);
-      overflow-x: hidden;
-      scroll-behavior: smooth;
-      position: relative;
-    }
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background);
+  color: var(--dark);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  position: relative;
+}
 
-    /* Fondo elegante */
-    body {
-      background: linear-gradient(-45deg, #fdfaf6, #fffdf9, #f9e4d0, #fdfaf6);
-      background-size: 400% 400%;
-      animation: gradientMove 15s ease infinite;
-    }
+body {
+  background: linear-gradient(-45deg, #fdfaf6, #fffdf9, #f9e4d0, #fdfaf6);
+  background-size: 400% 400%;
+  animation: movimientoDegradado 15s ease infinite;
+}
 
-    @keyframes gradientMove {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
-    }
+@keyframes movimientoDegradado {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
 
-    /* Brillos dorados */
-    body::before {
-      content: "";
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background: url("https://www.transparenttextures.com/patterns/stardust.png");
-      opacity: 0.18;
-      animation: twinkle 6s infinite alternate;
-      z-index: 0;
-    }
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url("https://www.transparenttextures.com/patterns/stardust.png");
+  opacity: 0.18;
+  animation: titilar 6s infinite alternate;
+  z-index: 0;
+}
 
-    @keyframes twinkle {
-      from {opacity: 0.12;}
-      to {opacity: 0.25;}
-    }
+@keyframes titilar {
+  from {opacity: 0.12;}
+  to {opacity: 0.25;}
+}
 
-    header {
-      text-align: center;
-      padding: 120px 20px 60px;
-      position: relative;
-      z-index: 2;
-      background: var(--background-alt);
-    }
+header {
+  text-align: center;
+  padding: 120px 20px 60px;
+  position: relative;
+  z-index: 2;
+  background: var(--background-alt);
+}
 
-    header h1 {
-      font-size: 4rem;
-      font-family: "Great Vibes", cursive;
-      color: var(--accent);
-      margin-bottom: 10px;
-    }
+header h1 {
+  font-size: 4rem;
+  font-family: "Great Vibes", cursive;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
 
-    header h2 {
-      font-size: 1.5rem;
-      font-weight: 500;
-      color: var(--accent);
-      margin-top: 0.5rem;
-    }
+header h1 img {
+  height: 240px;
+  vertical-align: middle;
+  margin-right: 16px;
+}
 
-    header p {
-      font-size: 1.3rem;
-      color: var(--dark);
-    }
+header p {
+  font-size: 1.3rem;
+  color: var(--dark);
+}
 
-    section {
-      padding: 70px 20px;
-      text-align: center;
-      position: relative;
-      z-index: 2;
-    }
+section {
+  padding: 70px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
 
-    h2 {
-      color: var(--primary);
-      margin-bottom: 20px;
-      font-size: 2.2rem;
-    }
+h2 {
+  color: var(--primary);
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+}
 
-    .card {
-      max-width: 800px;
-      margin: auto;
-      background: var(--background-alt);
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
+.card, .tarjeta {
+  max-width: 800px;
+  margin: auto;
+  background: var(--background-alt);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: left;
+}
 
-    /* Imagen */
-    .image-section {
-      padding: 0;
-      margin: 40px 0;
-    }
-    .image-section img {
-      display: block;
-      max-width: 500px; 
-      width: 100%;
-      margin: 0 auto;
-      border-radius: 12px;
-    }
+.seccion-imagen {
+  padding: 0;
+  margin: 40px 0;
+}
 
-    /* Formulario */
-    form {
-      max-width: 500px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    input, textarea {
-      padding: 12px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      font-size: 1rem;
-      background: #fff;
-    }
-    button {
-      padding: 12px;
-      border: none;
-      border-radius: 8px;
-      background: var(--primary);
-      color: #fff;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    button:hover {
-      background: var(--accent);
-    }
+.seccion-imagen img {
+  display: block;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 12px;
+}
 
-    /* Timeline */
-    .timeline {
-      max-width: 600px;
-      margin: auto;
-      position: relative;
-      padding-left: 30px;
-    }
-    .timeline::before {
-      content: "";
-      position: absolute;
-      left: 15px;
-      top: 0;
-      bottom: 0;
-      width: 4px;
-      background: var(--accent);
-      border-radius: 2px;
-    }
-    .timeline-item {
-      position: relative;
-      margin-bottom: 40px;
-      text-align: left;
-      padding-left: 50px; 
-    }
-    .timeline-item::before {
-      content: "🎉";
-      position: absolute;
-      left: 0;   
-      top: 0;
-      background: var(--primary);
-      color: #fff;
-      border-radius: 50%;
-      width: 28px;
-      height: 28px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-    }
-    .timeline-item h3 {
-      margin: 0 0 6px;
-      color: var(--accent);
-    }
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 
-    /* Galería */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 12px;
-    }
-    .gallery img {
-      width: 100%;
-      border-radius: 12px;
-    }
+input, textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+}
 
-    /* Contador */
-    #countdown {
-      font-size: 2rem;
-      font-weight: bold;
-      margin-top: 20px;
-      color: var(--primary);
-    }
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: var(--secondary);
-      color: #fff;
-      margin-top: 40px;
-    }
+button:hover {
+  background: var(--accent);
+}
 
-    /* Botón calendario */
-    .btn-calendario {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 16px 28px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #fff;
-      background: linear-gradient(135deg, var(--accent), var(--primary));
-      border-radius: 10px;
-      text-decoration: none;
-      transition: transform 0.2s ease, box-shadow 0.3s ease;
-    }
-    .btn-calendario:hover {
-      transform: scale(1.08);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-    }
+.linea-tiempo {
+  max-width: 600px;
+  margin: auto;
+  position: relative;
+  padding-left: 30px;
+}
 
-    /* Honeypot oculto */
-    .hidden {
-      display: none !important;
-      visibility: hidden;
-    }
+.linea-tiempo::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--accent);
+  border-radius: 2px;
+}
 
-    .dress-flex {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
-      margin: 1.5rem 0;
-    }
+.evento {
+  position: relative;
+  margin-bottom: 40px;
+  text-align: left;
+  padding-left: 50px;
+}
 
-    .dress-item {
-      flex: 1 1 250px;
-      background: rgba(255, 255, 255, 0.1);
-      padding: 1rem 1.5rem;
-      border-radius: 1rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
+.evento::before {
+  content: "🎉";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
 
-    .dress-item h3 {
-      margin-bottom: 0.5rem;
-      color: var(--accent);
-    }
+.evento h3 {
+  margin: 0 0 6px;
+  color: var(--accent);
+}
+
+.galeria img, .gallery img {
+  width: 100%;
+  max-width: 100%; /* antes estaba 600px */
+  margin: 0;        /* elimina márgenes automáticos */
+  border-radius: 8px; /* opcional, bordes más pequeños */
+}
+
+.galeria img, .gallery img {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start; /* opcional */
+}
+
+.gallery-item {
+  flex: 1 1 250px; /* opcional para responsividad */
+  text-align: center;
+}
+
+
+.gallery-item img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
+.caption {
+  font-size: 0.9rem;
+  color: var(--primary);
+  margin-top: 6px;
+  line-height: 1.3; /* opcional */
+  font-weight: 500; /* opcional */
+}
+
+#contador {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 20px;
+  color: var(--primary);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--secondary);
+  color: #fff;
+  margin-top: 40px;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+
+.btn-calendario {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 16px 28px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--primary));
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-calendario:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+}
+
+.oculto {
+  display: none !important;
+  visibility: hidden;
+}
+
+.rosario-resaltado {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #a80038, #6a0f2d, #8a2be2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 6px rgba(106, 15, 45, 0.3);
+  letter-spacing: 1px;
+  animation: resplandor 3s ease-in-out infinite alternate;
+}
+
+@keyframes resplandor {
+  from { text-shadow: 2px 2px 6px rgba(106, 15, 45, 0.3); }
+  to { text-shadow: 2px 2px 12px rgba(138, 43, 226, 0.6); }
+}
+
+.vestimenta-flex, .dress-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.vestimenta-item, .dress-item {
+  flex: 1 1 250px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.vestimenta-item h3, .dress-item h3 {
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
   </style>
+
 </head>
+  <!-- Lightbox JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
 <body>
 
-  <!-- Header -->
-  <header>
-    <h1>Sebastián Plazas Andrade</h1>
-    <h2>Universidad del Rosario</h2>
-    <p>🎓 ¡Me gradué! 🎓</p>
-  </header>
+  <!-- Encabezado -->
+<header>
+  <h1>
+    <img src="logo.png" alt="Logo" style="height:240px; vertical-align:middle; margin-right:16px;">
+    Sebastián Plazas Andrade
+  </h1>
+  <h2>🎓 ¡Me gradué! 🎓</h2>
+</header>
 
-  <!-- Mood -->
-  <section id="mood">
-    <h2>🎶 El mood de la fiesta</h2>
+  <!-- Ambiente -->
+  <section id="ambiente">
+    <h2>🎶 El ambiente de la fiesta</h2>
     <iframe style="border-radius:12px" 
       src="https://open.spotify.com/embed/track/5vgwmo15qa4jKLFW726iaF?utm_source=generator" 
       width="100%" height="152" frameborder="0" 
@@ -298,107 +366,157 @@
   <section id="mensaje">
     <h2>Un mensaje para ti</h2>
     <div class="card">
-      <p>Mi grado es mucho más que un diploma. Es el fruto de años de esfuerzo, risas, lágrimas, dedicación y sueños compartidos con personas que han sido mi fuerza en todo este camino.</p>
-      <p>Quiero que seas parte de esta fiesta porque tu presencia es el mejor regalo. Será una noche de música, sonrisas, abrazos y momentos que quedarán para siempre en nuestra memoria ✨.</p>
+      <p>Mi grado es mucho más que un diploma. Es el fruto de años de esfuerzo, estudio, risas, lágrimas, dedicación y sueños compartidos con personas que han sido mi fuerza en todo este camino.</p>
+      <p>Quiero que seas parte de esta celebración porque tu presencia es el mejor regalo. Será una noche de música, sonrisas, abrazos y momentos que quedarán para siempre en nuestra memoria ✨.</p>
       <p>¡Gracias por estar aquí y ser parte de mi historia! ❤️</p>
     </div>
   </section>
 
-  <!-- Imagen entre textos -->
-  <section class="image-section">
-    <img src="fondo-extra1.jpg" alt="Decoración del evento de grado">
-  </section>
+<section class="seccion-imagen">
+  <img src="fondo-extra1.jpg" alt="Decoración del evento de grado">
+</section>
 
-  <!-- Timeline -->
-  <section id="cronograma">
-    <h2>🕒 Así se vivirá la noche</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <h3>Recepción & Bienvenida</h3>
-        <p>6:00 PM · Llegada con cóctel de bienvenida, abrazos y primeras fotos 📸✨</p>
+<section id="cronograma">
+  <h2>🕒 Así se vivirá la noche</h2>
+  <div class="linea-tiempo">
+    <div class="evento">
+      <h3>Recepción y Bienvenida</h3>
+      <p>6:00 PM · Llegada, bienvenida, abrazos y primeras fotos 📸✨</p>
+    </div>
+    <div class="evento">
+      <h3>Brindis y Palabras</h3>
+      <p>7:00 PM · Un brindis especial y mensajes que nos llenarán de orgullo 🥂</p>
+    </div>
+  <div class="evento">
+    <h3>Compartamos Memorias</h3>
+    <p>7:30 PM · Momentos que captamos en el tiempo 📷</p>
+  </div>
+    <div class="evento">
+      <h3>Cena</h3>
+      <p>8:30 PM · Disfrutemos juntos de una deliciosa cena para recargar energía 🍴😋</p>
+    </div>
+    <div class="evento">
+      <h3>Fiesta y Baile</h3>
+      <p>10:00 PM · A romper la pista con la mejor música y mucha alegría 💃🕺🔥</p>
+    </div>
+    <div class="evento">
+      <h3>Hora loca</h3>
+      <p>12:00 AM · ¡Empieza la locura! Colores, risas y pura alegría 🎭🎉</p>
+    </div>
+    <div class="evento">
+      <h3>Cierre mágico</h3>
+      <p>3:00 AM · Despedida entre risas, memorias y la promesa de nuevas aventuras ✨🌙</p>
+    </div>
+  </div>
+</section>
+
+<section id="galeria">
+  <h2>📸 Recuerdos de mi U</h2>
+  <div class="gallery">
+    <div class="gallery-item">
+      <a href="Galeria0.jpg" data-lightbox="galeria" data-title="Quienes me recibieron en la gran ciudad 🌆✨">
+        <img src="Galeria0.jpg" alt="Quienes me recibieron en la gran ciudad">
+      </a>
+      <p class="caption">Quienes me recibieron en la gran ciudad 🌆✨</p>
+    </div>
+
+    <div class="gallery-item">
+      <a href="Galeria1.jpg" data-lightbox="galeria" data-title="Primer día en que voy a la U 🎓🚀">
+        <img src="Galeria1.jpg" alt="Primer día en que voy a la U">
+      </a>
+      <p class="caption">Primer día en que voy a la U 🎓🚀</p>
+    </div>
+
+    <div class="gallery-item">
+      <a href="Galeria2.jpg" data-lightbox="galeria" data-title="Modalidad Hyflex remoto 💻📚">
+        <img src="Galeria2.jpg" alt="Modalidad Hyflex remoto">
+      </a>
+      <p class="caption">Modalidad Hyflex remoto 💻📚</p>
+    </div>
+
+    <div class="gallery-item">
+      <a href="Galeria3.jpg" data-lightbox="galeria" data-title="Mis padres conociendo la sede norte 👨‍👩‍👦🏫">
+        <img src="Galeria3.jpg" alt="Mis padres conociendo la sede norte">
+      </a>
+      <p class="caption">Mis padres conociendo la sede norte 👨‍👩‍👦🏫</p>
+    </div>
+
+    <div class="gallery-item">
+      <a href="Galeria4.jpg" data-lightbox="galeria" data-title="Cocinando con Ana Belén Charry 🍳👩‍🍳">
+        <img src="Galeria4.jpg" alt="Cocinando con Ana Belén Charry">
+      </a>
+      <p class="caption">Cocinando con Ana Belén Charry 🍳👩‍🍳</p>
+    </div>
+
+    <div class="gallery-item">
+      <a href="Galeria5.jpg" data-lightbox="galeria" data-title="Invitada de visita 🌟🤝">
+        <img src="Galeria5.jpg" alt="Invitada de visita">
+      </a>
+      <p class="caption">Invitada de visita 🌟🤝</p>
+    </div>
+
+    <div class="gallery-item">
+      <a href="Galeria6.jpg" data-lightbox="galeria" data-title="Día de la Familia 👪💖">
+        <img src="Galeria6.jpg" alt="Día de la Familia">
+      </a>
+      <p class="caption">Día de la Familia 👪💖</p>
+    </div>
+
+    <div class="gallery-item">
+      <a href="Galeria7.jpg" data-lightbox="galeria" data-title="Artes Marciales 🥋💥">
+        <img src="Galeria7.jpg" alt="Artes Marciales">
+      </a>
+      <p class="caption">Artes Marciales 🥋💥</p>
+    </div>
+
+    <div class="gallery-item">
+      <a href="Galeria8.jpg" data-lightbox="galeria" data-title="AIESEC 🌍🤩">
+        <img src="Galeria8.jpg" alt="AIESEC">
+      </a>
+      <p class="caption">AIESEC 🌍🤩</p>
+    </div>
+
+    <div class="gallery-item">
+      <a href="Galeria9.jpg" data-lightbox="galeria" data-title="Danza Urbana 🕺🎶">
+        <img src="Galeria9.jpg" alt="Danza Urbana">
+      </a>
+      <p class="caption">Danza Urbana 🕺🎶</p>
+    </div>
+
+    <div class="gallery-item">
+      <a href="Galeria10.jpg" data-lightbox="galeria" data-title="Última materia obligatoria del plan de estudios: Geometría, Museo del Traje 📐🏛️">
+        <img src="Galeria10.jpg" alt="Última materia obligatoria del plan de estudios, Geometría, Museo del Traje">
+      </a>
+      <p class="caption">Última materia obligatoria del plan de estudios: Geometría, Museo del Traje 📐🏛️</p>
+    </div>
+
+    <div class="gallery-item">
+      <a href="Galeria11.jpg" data-lightbox="galeria" data-title="Tango 💃🕺">
+        <img src="Galeria11.jpg" alt="Tango">
+      </a>
+      <p class="caption">Tango 💃🕺</p>
+    </div>
+  </div>
+</section>
+
+<!-- Código de vestimenta -->
+<section id="vestimenta">
+  <h2>✨👗 Código de vestimenta con estilo 👔✨</h2>
+  <div class="card">
+    <p>Queremos que todos disfruten la celebración cómodamente y con buen estilo 😎. No hay reglas estrictas, ¡solo que brillen! ✨</p>
+    <div class="dress-flex">
+      <div class="dress-item">
+        <h3>Hombres 👔</h3>
+        <p>Camisa elegante o casual, pantalón semi-formal y zapatos cómodos 👞. No es necesario traje completo, pero sí un buen look 🔥.</p>
       </div>
-      <div class="timeline-item">
-        <h3>Ceremonia de grado</h3>
-        <p>7:00 PM · El gran momento: toga, birrete y la emoción de recibir el título 🎓❤️</p>
-      </div>
-      <div class="timeline-item">
-        <h3>Brindis & Palabras</h3>
-        <p>8:00 PM · Un brindis especial y mensajes que nos llenarán de orgullo 🥂</p>
-      </div>
-      <div class="timeline-item">
-        <h3>Cena</h3>
-        <p>9:00 PM · Disfrutemos juntos de una cena deliciosa para recargar energía 🍴😋</p>
-      </div>
-      <div class="timeline-item">
-        <h3>Hora loca</h3>
-        <p>11:00 PM · ¡Empieza la locura! Colores, risas y pura alegría 🎭🎉</p>
-      </div>
-      <div class="timeline-item">
-        <h3>Fiesta & Baile</h3>
-        <p>12:00 AM · A romper la pista con la mejor música y mucha energía 💃🕺🔥</p>
-      </div>
-      <div class="timeline-item">
-        <h3>Cierre mágico</h3>
-        <p>3:00 AM · Despedida entre risas, memorias y la promesa de nuevas aventuras ✨🌙</p>
+      <div class="dress-item">
+        <h3>Mujeres 👗</h3>
+        <p>Vestido lindo, jumpsuit o conjunto elegante con el que se sientan cómodas y espectaculares 👠✨. Glam y estilo sin necesidad de gala rígida 💫.</p>
       </div>
     </div>
-  </section>
-
-  <!-- Contador -->
-  <section id="contador">
-    <h2>⏳ La cuenta regresiva ha comenzado</h2>
-    <div class="countdown" id="countdown"></div>
-  </section>
-
-  <!-- Imagen entre textos -->
-  <section class="image-section">
-    <img src="fondo-extra2.jpg" alt="Amigos celebrando en el evento">
-  </section>
-
-  <!-- Galería -->
-  <section id="galeria">
-    <h2>📸 Recuerdos</h2>
-    <div class="gallery">
-      <img src="Galeria1.jpg" alt="Foto de recuerdo 1">
-      <img src="Galeria6.jpg" alt="Foto de recuerdo 6">
-      <img src="Galeria7.jpg" alt="Foto de recuerdo 7">
-      <img src="Galeria9.jpg" alt="Foto de recuerdo 9">
-    </div>
-  </section>
-
-  <!-- Ubicación -->
-  <section id="ubicacion">
-    <h2>📍 Detalles del evento</h2>
-    <p>Coliseo de Ferias Manuel Victoria Rojas, Tuluá</p>
-    <p>📅 15 de noviembre 2025 · 6:00 PM</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.6312042952823!2d-76.18662400000001!3d4.095238000000012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e39c5e6f488ed9b%3A0xa74e10395cd35dce!2sColiseo%20de%20Ferias%20Manuel%20Victoria%20Rojas!5e0!3m2!1ses-419!2sco!4v1759165951053!5m2!1ses-419!2sco" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    <br><br>
-    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Grado%20de%20Sebasti%C3%A1n&details=Celebraci%C3%B3n%20de%20grado&location=Coliseo%20de%20Ferias%20Manuel%20Victoria%20Rojas%2C%20Bogot%C3%A1&dates=20251115T230000Z/20251116T080000Z" 
-       target="_blank" class="btn-calendario">
-       📅 Agregar este evento a tu calendario
-    </a>
-  </section>
-
-  <!-- Código de vestimenta -->
-  <section id="vestimenta">
-    <h2>✨👗 Con Flow y Estilo 👔✨</h2>
-    <div class="card">
-      <p>La idea es celebrar con actitud 🔥. No hay reglas estrictas, pero queremos que todos brillen en la noche 💫.</p>
-      <div class="dress-flex">
-        <div class="dress-item">
-          <h3>Para ellos</h3>
-          <p>Camisa cool, pantalón elegante o semi formal y zapatos con estilo 👞.  
-          No hace falta traje completo, pero sí un look con flow 😎.</p>
-        </div>
-        <div class="dress-item">
-          <h3>Para ellas</h3>
-          <p>Vestido lindo, jumpsuit o conjunto con el que te sientas cómoda y espectacular 👠.  
-          Glam y estilo sin necesidad de gala rígida ✨.</p>
-        </div>
-      </div>
-      <p>Lo importante es que vengas con la mejor vibra y muchas ganas de gozar 💃🕺.</p>
-    </div>
-  </section>
+    <p>Lo más importante es venir con buena vibra y muchas ganas de disfrutar la noche 💃🕺🎉.</p>
+  </div>
+</section>
 
   <!-- Lluvia de sobres -->
   <section id="sobres">
@@ -409,36 +527,47 @@
     </div>
   </section>
 
-  <!-- Formulario -->
-  <section id="formulario">
-    <h2>Confirma tu asistencia</h2>
-    <form id="rsvpForm">
-      <label for="nombre">Nombre completo</label>
-      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
-
-      <label for="correo">Correo electrónico</label>
-      <input type="email" id="correo" name="correo" placeholder="Tu correo electrónico" required>
-
-      <label for="telefono">Teléfono</label>
-      <input type="tel" id="telefono" name="telefono" placeholder="Tu teléfono" required>
-
-      <label for="invitados">Cantidad de invitados</label>
-      <input type="number" id="invitados" name="invitados" placeholder="Cantidad de invitados" min="1" required>
-
-      <label for="mensaje">Mensaje</label>
-      <textarea id="mensaje" name="mensaje" rows="4" placeholder="Déjame un mensaje ❤️"></textarea>
-
-      <!-- Honeypot -->
-      <input type="text" name="_honey" class="hidden">
-
-      <button type="submit">Confirmar asistencia</button>
-    </form>
+    <!-- Ubicación -->
+  <section id="ubicacion">
+    <h2>📍 Lugar del evento</h2>
+    <p>Coliseo de Ferias Manuel Victoria Rojas, Tuluá</p>
+    <p>Sábado, 15 de noviembre 2025 · 6:00 PM</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.6312042952823!2d-76.18662400000001!3d4.095238000000012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e39c5e6f488ed9b%3A0xa74e10395cd35dce!2sColiseo%20de%20Ferias%20Manuel%20Victoria%20Rojas!5e0!3m2!1ses-419!2sco!4v1759165951053!5m2!1ses-419!2sco" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <br><br>
+    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Grado%20de%20Sebasti%C3%A1n&details=Celebraci%C3%B3n%20de%20grado&location=Coliseo%20de%20Ferias%20Manuel%20Victoria%20Rojas%2C%20Bogot%C3%A1&dates=20251115T230000Z/20251116T080000Z" 
+       target="_blank" class="btn-calendario">
+      Agregar este evento a tu calendario
+    </a>
   </section>
 
-  <footer>
-    <p>Con mucho amor,  
-    Sebastián Plazas Andrade ❤️🎓</p>
-  </footer>
+      <!-- Contador -->
+  <section id="contador">
+    <h2>⏳ La cuenta regresiva ha comenzado</h2>
+    <div class="countdown" id="countdown"></div>
+  </section>
+
+<!-- Formulario -->
+<section id="formulario">
+  <h2>Confirma tu asistencia</h2>
+  <p style="font-style: italic; color: #800000; margin-bottom: 1em;">
+    Por favor confirma tu asistencia hasta el <strong>31 de octubre del 2025</strong>.
+  </p>
+  <form id="rsvpForm">
+    <label for="nombre">Nombre completo</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+
+    <label for="invitados">Número de asistentes</label>
+    <input type="number" id="invitados" name="invitados" placeholder="Número de asistentes" min="1" required>
+
+    <label for="mensaje">Mensaje</label>
+    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Déjame un mensaje ❤️"></textarea>
+
+    <!-- Honeypot -->
+    <input type="text" name="_honey" class="hidden">
+
+    <button type="submit">Enviar</button>
+  </form>
+</section>
 
   <script>
     // Contador
@@ -499,7 +628,10 @@
       }
     });
   </script>
+
+    <footer>
+    <p>Con mucho amor,  
+    Sebastián Plazas Andrade ❤️🎓</p>
+  </footer>
 </body>
 </html>
-
-
