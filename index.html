@@ -611,42 +611,39 @@ footer {
         `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }, 1000);
 
-    // Formulario
-    document.getElementById("rsvpForm").addEventListener("submit", async function(e){
-      e.preventDefault();
+document.getElementById("rsvpForm").addEventListener("submit", async function(e){
+  e.preventDefault();
 
-      // Honeypot
-      if (this._honey.value !== "") {
-        alert("Error en el formulario.");
-        return;
-      }
+  // Honeypot
+  if (this._honey.value !== "") {
+    alert("Error en el formulario.");
+    return;
+  }
 
-      const data = {
-        nombre: this.nombre.value,
-        correo: this.correo.value,
-        telefono: this.telefono.value,
-        invitados: this.invitados.value,
-        mensaje: this.mensaje.value
-      };
+  const data = {
+    nombre: this.nombre.value,
+    invitados: this.invitados.value,
+    mensaje: this.mensaje.value
+  };
 
-      try {
-        const response = await fetch("https://formspree.io/f/xjkvjpgn", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data)
-        });
-
-        if (response.ok) {
-          alert("🎉 ¡Gracias por confirmar tu asistencia!");
-          this.reset();
-        } else {
-          alert("❌ Hubo un error. Intenta nuevamente.");
-        }
-      } catch (error) {
-        alert("❌ Error de conexión. Intenta más tarde.");
-      }
+  try {
+    const response = await fetch("https://formspree.io/f/xjkvjpgn", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
     });
-  </script>
+
+    if (response.ok) {
+      alert("🎉 ¡Gracias por confirmar tu asistencia!");
+      this.reset();
+    } else {
+      alert("❌ Hubo un error. Intenta nuevamente.");
+    }
+  } catch (error) {
+    alert("❌ Error de conexión. Intenta más tarde.");
+  }
+});
+</script>
 
     <footer>
     <p>Con mucho amor,  
@@ -654,4 +651,5 @@ footer {
   </footer>
 </body>
 </html>
+
 
