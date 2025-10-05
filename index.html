@@ -571,22 +571,53 @@ footer {
   <p style="font-style: italic; color: #800000; margin-bottom: 1em;">
     Por favor hazlo hasta el <strong>31 de octubre del 2025</strong>.
   </p>
-  <form id="rsvpForm">
+
+  <form id="rsvpForm" action="https://formsubmit.co/sebasplaz@gmail.com" method="POST">
     <label for="nombre">Nombre completo</label>
     <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
 
     <label for="invitados">Número de asistentes</label>
     <input type="number" id="invitados" name="invitados" placeholder="Número de asistentes" min="1" required>
 
-    <label for="mensaje">Mensaje</label>
+    <label for="mensaje">Déjame un mensaje</label>
     <textarea id="mensaje" name="mensaje" rows="4" placeholder="Déjame un mensaje ❤️"></textarea>
 
-    <!-- Honeypot -->
-    <input type="text" name="_honey" class="hidden">
+    <!-- 🧠 Honeypot -->
+    <input type="text" name="_honey" style="display:none">
 
-    <button type="submit">Enviar</button>
+    <!-- ⚙️ Configuración FormSubmit -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+
+    <button type="submit">Enviar confirmación</button>
   </form>
 </section>
+
+<script>
+document.getElementById("rsvpForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  // Anti-spam
+  if (this._honey.value !== "") return;
+
+  const formData = new FormData(this);
+  try {
+    const response = await fetch(this.action, {
+      method: "POST",
+      body: formData
+    });
+
+    if (response.ok) {
+      alert("🎉 ¡Gracias por confirmar tu asistencia!");
+      this.reset();
+    } else {
+      alert("❌ Hubo un error. Intenta nuevamente.");
+    }
+  } catch (error) {
+    alert("❌ Error de conexión. Intenta más tarde.");
+  }
+});
+</script>
 
   <script>
     // Contador
@@ -611,64 +642,14 @@ footer {
         `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }, 1000);
     </script>
-
-  <form id="rsvpForm" action="https://formsubmit.co/sebasplaz@gmail.com" method="POST">
-  <label for="name">Nombre completo:</label>
-  <input type="text" id="name" name="name" required>
-
-  <label for="guests">Número de asistentes:</label>
-  <input type="number" id="guests" name="guests" min="1" required>
-
-  <label for="message">Déjame un mensaje:</label>
-  <textarea id="message" name="message" rows="4"></textarea>
-
-  <button type="submit">Enviar confirmación</button>
-
-  <!-- 🧠 Honeypot (anti-spam) -->
-  <input type="text" name="_honey" style="display:none">
-
-  <!-- ⚙️ Configuración FormSubmit -->
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_template" value="table">
-</form>
-
-<script>
-document.getElementById("rsvpForm").addEventListener("submit", async function(e){
-  e.preventDefault();
-
-  // Honeypot check
-  if (this._honey.value !== "") {
-    alert("Error en el formulario.");
-    return;
-  }
-
-  const formData = new FormData(this);
-
-  try {
-    const response = await fetch(this.action, {
-      method: "POST",
-      body: formData
-    });
-
-    if (response.ok) {
-      alert("🎉 ¡Gracias por confirmar tu asistencia!");
-      this.reset();
-    } else {
-      alert("❌ Hubo un error. Intenta nuevamente.");
-    }
-  } catch (error) {
-    alert("❌ Error de conexión. Intenta más tarde.");
-  }
-});
-</script>
-
-
+  
     <footer>
     <p>Con mucho amor,  
     Sebastián Plazas Andrade ❤️🎓</p>
   </footer>
 </body>
 </html>
+
 
 
 
